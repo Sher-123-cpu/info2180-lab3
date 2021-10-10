@@ -15,7 +15,7 @@ window.onload = () => {
     }
 }
 //part 2
-movingMouse = (item) =>
+movingMouse = (item,index) =>
     item.onclick = function(){
         if (state.length == 0){
             item.classList.add("X");
@@ -41,7 +41,19 @@ movingMouse = (item) =>
             game_state[id] = "X";
             cancel(item);
         }
+
+        var id = index;
+    
+    //part 3
+        item.onmouseover = function(){
+            item.classList.add("hover");
+        }
+        
+        item.onmouseleave = function(){
+            item.classList.remove("hover");
+        } 
         click_count++;
         console.log(game_state);
         winner(); 
+        
     } 
