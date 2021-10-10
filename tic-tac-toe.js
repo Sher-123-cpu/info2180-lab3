@@ -14,3 +14,34 @@ window.onload = () => {
         movingMouse(board_pieces[i],i);
     }
 }
+//part 2
+movingMouse = (item) =>
+    item.onclick = function(){
+        if (state.length == 0){
+            item.classList.add("X");
+            item.innerHTML = "X";
+            state.push("X");
+            game_state[id] = "X";
+            cancel(item);
+            
+        }
+        
+        else if (state[state.length-1] == "X") {
+            item.classList.add("O");
+            item.innerHTML = "O";
+            state.push("O");
+            game_state[id] = "O";
+            cancel(item);
+          
+            
+        } else {
+            item.classList.add("X");
+            item.innerHTML = "X";
+            state.push("X");
+            game_state[id] = "X";
+            cancel(item);
+        }
+        click_count++;
+        console.log(game_state);
+        winner(); 
+    } 
