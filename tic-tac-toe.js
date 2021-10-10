@@ -128,3 +128,8 @@ movingMouse = (item,index) =>
                 message.innerHTML = "Congratulations! O is the Winner!";
                 message.className = "you-won";
         }
+    //part 5 
+    var buttton = document.getElementsByClassName("btn")[0];
+    buttton.onclick = function(){
+        document.location.reload();
+    }
