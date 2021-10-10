@@ -57,3 +57,74 @@ movingMouse = (item,index) =>
         winner(); 
         
     } 
+    //part 4
+    winner = () =>{
+        //for X
+        if(game_state[0]== "X" && game_state[1]== "X" && game_state[2] == "X"){
+           congatsMessage("X");
+        }
+        else if(game_state[3]== "X" && game_state[4]== "X" && game_state[5] == "X"){
+            congatsMessage("X");
+         }
+         else if(game_state[6]== "X" && game_state[7]== "X" && game_state[8] == "X"){
+            congatsMessage("X");
+         }
+         else if(game_state[0]== "X" && game_state[3]== "X" && game_state[6] == "X"){
+           congatsMessage("X");
+        }
+        else if(game_state[1]== "X" && game_state[4]== "X" && game_state[7] == "X"){
+            congatsMessage("X");
+         }
+        else if(game_state[2]== "X" && game_state[5]== "X" && game_state[8] == "X"){
+            congatsMessage("X");
+         }
+        else if(game_state[2]== "X" && game_state[4]== "X" && game_state[6] == "X"){
+            congatsMessage("X");
+         }
+         else if(game_state[0]== "X" && game_state[4]== "X" && game_state[8] == "X"){
+            congatsMessage("X");
+         }
+         for O
+         if(game_state[0]== "O" && game_state[1]== "O" && game_state[2] == "O"){
+            congatsMessage("O");
+         }
+         else if(game_state[3]== "O" && game_state[4]== "O" && game_state[5] == "O"){
+             congatsMessage("O");
+          }
+          else if(game_state[6]== "O" && game_state[7]== "O" && game_state[8] == "O"){
+             congatsMessage("O");
+          }
+          else if(game_state[0]== "O" && game_state[3]== "O" && game_state[6] == "O"){
+            congatsMessage("O");
+         }
+         else if(game_state[1]== "O" && game_state[4]== "O" && game_state[7] == "O"){
+             congatsMessage("O");
+          }
+         else if(game_state[2]== "O" && game_state[5]== "O" && game_state[8] == "O"){
+             congatsMessage("O");
+          }
+         else if(game_state[2]== "O" && game_state[4]== "O" && game_state[6] == "O"){
+             congatsMessage("O");
+          }
+          else if(game_state[0]== "O" && game_state[4]== "O" && game_state[8] == "O"){
+             congatsMessage("O");
+          }
+        
+    }
+    //Message
+    congatsMessage =(el) =>{
+        // status id for message board
+        var message = document.getElementById("status");
+    
+        if (el == "X"){
+    
+                // for X
+                message.innerHTML = "Congratulations! X is the Winner!";
+                message.className = "you-won";
+        }
+        else if (el == "O"){
+    
+                //  for O
+                message.innerHTML = "Congratulations! O is the Winner!";
+                message.className = "you-won";
+        }
